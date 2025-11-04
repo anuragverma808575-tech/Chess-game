@@ -52,7 +52,7 @@ const renderBoard = () => {
   pieceElement.textContent = getPieceUnicode(square);
   pieceElement.draggable = true;
 
-  // 🎨 Different color for white & black pieces
+  
   if (square.color === "w") {
     pieceElement.classList.add("text-white");
   } else {
@@ -99,7 +99,7 @@ const updateStatus = () => {
           ? "text-green-500 font-bold text-xl"
           : "text-red-500 font-bold text-xl";
     } else if (chess.isDraw()) {
-      statusEl.textContent = "🤝 Draw Game!";
+      statusEl.textContent = "Draw Game!";
       statusEl.className = "text-blue-500 font-bold text-xl";
     }
     return;
@@ -149,3 +149,4 @@ socket.on("message", (msg) => {
 
 renderBoard();
 updateStatus();
+
